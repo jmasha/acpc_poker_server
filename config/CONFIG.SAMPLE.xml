@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Config xmlns="urn:nonstandard:config"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="urn:nonstandard:config 
+     file:xsd/config.xsd">
+
+ <Room>
+  <Name>SampleRoom</Name>
+  <Gamedef>gamedef/2Player.limit.gamedef.xml</Gamedef>
+  <Port>9001</Port>        
+ </Room>
+
+ <BotList>
+  <Bot>
+   <Type>AAAIPlayer</Type>
+   <Name>SamplerPlayer1</Name>
+   <BuyIn>20</BuyIn>
+   <Seat>0</Seat>
+   <Args>scripts/Player1.testscript.sh</Args>
+  </Bot>
+  <Bot>
+   <Type>AAAIPlayer</Type>
+   <Name>SamplerPlayer2</Name>
+   <BuyIn>20</BuyIn>
+   <Seat>1</Seat>
+   <Args>scripts/Player2.testscript.sh</Args>
+  </Bot>
+
+ </BotList>
+</Config>

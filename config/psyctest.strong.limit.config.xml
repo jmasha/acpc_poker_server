@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Config xmlns="urn:nonstandard:config"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="urn:nonstandard:config 
+     file:xsd/config.xsd">
+
+ <Room>
+  <Name>Psyccology Experiment</Name>
+  <Gamedef>gamedef/psyc.2Player.limit.gamedef.xml</Gamedef>
+  <Port>1001</Port>        
+ </Room>
+
+ <BotList>
+  <Bot>
+   <Type>AAAIPlayer</Type>
+   <Name>Polaris</Name>
+   <BuyIn>200</BuyIn>
+   <Seat>0</Seat>
+   <Args>scripts/psyctest.strong.limit.sh</Args>
+  </Bot>
+
+ </BotList>
+</Config>

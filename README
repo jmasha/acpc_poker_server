@@ -1,0 +1,44 @@
+Glassfrog Server How-To
+
+Compiling:
+
+Required: Ant
+
+All of the new codebase is Netbeans 6.1+ compliant and will can be built from within the Netbeans client.  If you don't want to use Netbeans you can compile from within the main folder by using the ant command.  Ant clean will clean the build target.
+
+
+Running:
+
+To run the program, after configureating defaults, simply run the run.sh script from the main directory.  This will start the server and dump information to stdout and stderr as well as the logfiles in the logs/ directory for each Match as well as a general Server log.  See the matchConstructor.py useage for more information on starting matches.
+
+
+Configurations:
+
+There are three congfig files that allow options to be changed within the server.  These are DEALER.config.xml, SERVER.config.xml and ROOM.config.xml in the config/ directory.  These provide defaults for all SERVER, ROOM and DEALER settings.  See the config files for more details.  Also, you can configure .config.xml files to use with various tools to generate matches for the server.  See SAMPLE.config.xml for details.  Also, there are some sample game definition files in the gamedefs/ directory used to further configure the type of card game to play and validation tools in the xsd directory to check your XML config files validity.
+
+
+Keys:
+
+The server can be set up to run online and use keys to condition what games and opponents online players see.  These can also be used offline however it is not standard to do so.  These are mostly used for situations where you have multiple opponents and are not controlling matches directly as the administrator.  See the keys/ directory for a sample keys.xml file and key generation scripts can be found in the tools/ directory.
+
+
+Tools:
+
+All tools can be run without arguments for further information about thier specific useage.
+
+benchmark.py: A tool used for benchmarking the server using keys.
+
+sequenceGenerator.py: A tool used to generate a sequence of characters to draw a fair random sample from the possible configs for a match.
+
+queryMatch.py and queryServer.py: Tools used to get information about a specific match or the general state of the server.
+
+monitor_server.py: An incomplete tool used to monitor the status of the server and send admins emails if the server were to go down.  
+
+keygen.py: Used to generate key entries into the keys.xml file for users.
+
+matchConstructor.py: Used to create matches to either send to the server individually or in batch.
+
+
+Patching and Packaging:
+
+There are two scripts to help deploy the server.  The package.sh script will package all relevant source into a .tgz file.  The patch.sh script has options that can be viewed from within the script to patch parts of the source.
